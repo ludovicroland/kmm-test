@@ -47,7 +47,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          branch: "build-${{ steps.generate-uuid.outputs.uuid }}"
+          branch: "build-spm"
 
       - name: Checkout the repo
         uses: actions/checkout@v3
@@ -92,4 +92,4 @@ jobs:
         uses: touchlab/action-delete-branch@v3.1.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branches: "build-${{ steps.generate-uuid.outputs.uuid }}"
+          branches: "build-spm"
